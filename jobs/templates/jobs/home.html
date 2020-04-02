@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!--  'staticfiles' is not a registered tag library, recommends 'static'  -->
+    {% load static %}
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta content="" name="description">
     <meta content="Mark Otto, Jacob Thornton, and Bootstrap contributors" name="author">
     <meta content="Jekyll v3.8.6" name="generator">
-    <title>Album example · Bootstrap</title>
+    <title>Adam John Benitez</title>
 
     <link href="https://getbootstrap.com/docs/4.4/examples/album/" rel="canonical">
 
@@ -14,14 +16,14 @@
       <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
 
     <!-- Favicons -->
-<link href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-<link href="/docs/4.4/assets/img/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-<link href="/docs/4.4/assets/img/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-<link href="/docs/4.4/assets/img/favicons/manifest.json" rel="manifest">
-<link color="#563d7c" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" rel="mask-icon">
-<link href="/docs/4.4/assets/img/favicons/favicon.ico" rel="icon">
-<meta content="/docs/4.4/assets/img/favicons/browserconfig.xml" name="msapplication-config">
-<meta content="#563d7c" name="theme-color">
+      <link href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+      <link href="/docs/4.4/assets/img/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+      <link href="/docs/4.4/assets/img/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+      <link href="/docs/4.4/assets/img/favicons/manifest.json" rel="manifest">
+      <link color="#563d7c" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" rel="mask-icon">
+      <link href="/docs/4.4/assets/img/favicons/favicon.ico" rel="icon">
+      <meta content="/docs/4.4/assets/img/favicons/browserconfig.xml" name="msapplication-config">
+      <meta content="#563d7c" name="theme-color">
 
 
     <style>
@@ -46,44 +48,40 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">aj</a>
-      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <a class="navbar-brand" href="#">aj</a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Resume<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Github</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Jobs<span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Resume</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-</nav>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex justify-content-between">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <svg aria-hidden="true" class="mr-2" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>Album</strong>
-      </a>
-      <button aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarHeader" data-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-</header>
+              <a class="nav-link" href="{% static 'Profile.pdf' %}">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/ajbenitezen">Twitter</a>
+            </li>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/ajbenitezen/">Instagram</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
 
 <main role="main">
 
@@ -93,8 +91,8 @@
       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
       <p>
         <a class="btn btn-primary my-2" href="mailto:adamjohndbenitez@gmail.com">Email Me</a>
-        <a class="btn btn-secondary my-2" href="#">Secondary action</a>
       </p>
+      <img src="{% static 'AJ with cap JPEG.jpg' %}" />
     </div>
   </section>
 
@@ -102,57 +100,13 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" focusable="false" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect fill="#55595c" height="100%" width="100%"/><text dy=".3em" fill="#eceeef" x="50%" y="50%">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button class="btn btn-sm btn-outline-secondary" type="button">View</button>
-                  <button class="btn btn-sm btn-outline-secondary" type="button">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" focusable="false" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect fill="#55595c" height="100%" width="100%"/><text dy=".3em" fill="#eceeef" x="50%" y="50%">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button class="btn btn-sm btn-outline-secondary" type="button">View</button>
-                  <button class="btn btn-sm btn-outline-secondary" type="button">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" focusable="false" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect fill="#55595c" height="100%" width="100%"/><text dy=".3em" fill="#eceeef" x="50%" y="50%">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button class="btn btn-sm btn-outline-secondary" type="button">View</button>
-                  <button class="btn btn-sm btn-outline-secondary" type="button">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
 
+        {% for job in jobs.all %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" focusable="false" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect fill="#55595c" height="100%" width="100%"/><text dy=".3em" fill="#eceeef" x="50%" y="50%">Thumbnail</text></svg>
+            <img class="card-img-top" src="{{ job.image.url }}" />
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">{{ job.summary }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button class="btn btn-sm btn-outline-secondary" type="button">View</button>
@@ -163,82 +117,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" focusable="false" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect fill="#55595c" height="100%" width="100%"/><text dy=".3em" fill="#eceeef" x="50%" y="50%">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button class="btn btn-sm btn-outline-secondary" type="button">View</button>
-                  <button class="btn btn-sm btn-outline-secondary" type="button">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" focusable="false" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect fill="#55595c" height="100%" width="100%"/><text dy=".3em" fill="#eceeef" x="50%" y="50%">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button class="btn btn-sm btn-outline-secondary" type="button">View</button>
-                  <button class="btn btn-sm btn-outline-secondary" type="button">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
 
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" focusable="false" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect fill="#55595c" height="100%" width="100%"/><text dy=".3em" fill="#eceeef" x="50%" y="50%">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button class="btn btn-sm btn-outline-secondary" type="button">View</button>
-                  <button class="btn btn-sm btn-outline-secondary" type="button">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" focusable="false" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect fill="#55595c" height="100%" width="100%"/><text dy=".3em" fill="#eceeef" x="50%" y="50%">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button class="btn btn-sm btn-outline-secondary" type="button">View</button>
-                  <button class="btn btn-sm btn-outline-secondary" type="button">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" focusable="false" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect fill="#55595c" height="100%" width="100%"/><text dy=".3em" fill="#eceeef" x="50%" y="50%">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button class="btn btn-sm btn-outline-secondary" type="button">View</button>
-                  <button class="btn btn-sm btn-outline-secondary" type="button">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
