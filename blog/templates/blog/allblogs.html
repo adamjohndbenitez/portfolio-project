@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="Mark Otto, Jacob Thornton, and Bootstrap contributors" name="author">
+    <meta content="Jekyll v3.8.6" name="generator">
+    <title>Album example · Bootstrap</title>
+
+    <link href="https://getbootstrap.com/docs/4.4/examples/album/" rel="canonical">
+
+    <!-- Bootstrap core CSS -->
+      <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+
+    <!-- Favicons -->
+<link href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/docs/4.4/assets/img/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/docs/4.4/assets/img/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/docs/4.4/assets/img/favicons/manifest.json" rel="manifest">
+<link color="#563d7c" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" rel="mask-icon">
+<link href="/docs/4.4/assets/img/favicons/favicon.ico" rel="icon">
+<meta content="/docs/4.4/assets/img/favicons/browserconfig.xml" name="msapplication-config">
+<meta content="#563d7c" name="theme-color">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">aj</a>
+      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Jobs<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Github</a>
+          </li>
+          <li class="nav-item Active">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Resume</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+</nav>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <svg aria-hidden="true" class="mr-2" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <strong>Album</strong>
+      </a>
+      <button aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarHeader" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+
+    <div class="container">
+        <h1 class="text-center pt-3">Welcome to Nick's Blog</h1>
+        <br />
+        <br />
+        <br />
+        <h2>Latest Blog Posts</h2>
+        <hr />
+
+        {% for blog in blogs.all %}
+        <a href=""><h3>{{ blog.title }}<h3/></a> <br />
+        {% endfor %}
+    </div>
+
+
+
+</main>
+
+<footer class="text-muted">
+  <div class="container text-center">
+    <p>&copy Copyright Adam John {% now "Y"%}</p>
+  </div>
+</footer>
+<script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script crossorigin="anonymous" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" src="/docs/4.4/dist/js/bootstrap.bundle.min.js"></script></body>
+
+<script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</html>
